@@ -5,6 +5,7 @@ using System.Web;
 using System.Web.Mvc;
 using Vidley.Models;
 using System.Data.Entity;
+using Vidley.ViewModels;
 
 namespace Vidley.Controllers
 {
@@ -18,6 +19,46 @@ namespace Vidley.Controllers
         protected override void Dispose(bool disposing)
         {
             _dbContext.Dispose();
+        }
+        public ActionResult Add()
+        {
+            var membeshipType = _dbContext.MembershipTypes.ToList();
+            var viewModel = new AddCustomerViewModel
+            {
+                MembershipTypes = membeshipType
+            };
+            return View("Add",viewModel);
+        }
+        [HttpPost]
+        public ActionResult Save(Customer customer)
+        {
+            if (customer.Id == 0)
+                _dbContext.Customers.Add(customer);
+            else
+            {
+                var customerDb = _dbContext.Customers.Single(c => c.Id == customer.Id);
+
+                customerDb.Name = customer.Name;
+                customerDb.Birthdate = customer.Birthdate;
+                customerDb.IsSubscribed = customer.IsSubscribed;
+            }
+                _dbContext.SaveChanges();
+
+            return RedirectToAction("Index", "Customers");
+        }
+        public ActionResult Edit(int id)
+        {
+            var customer = _dbContext.Customers.SingleOrDefault(c => c.Id == id);
+            if (customer == null)
+                return HttpNotFound();
+
+            var viewModel = new AddCustomerViewModel
+            {
+                Customer = customer,
+                MembershipTypes = _dbContext.MembershipTypes.ToList()
+            };
+
+            return View("Add", viewModel);
         }
         public ViewResult Index()
         {
