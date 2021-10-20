@@ -4,29 +4,31 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using Vidley.Models;
+using System.Data.Entity;
 
 namespace Vidley.Controllers
 {
     public class MovieController : Controller
     {
+        private ApplicationDbContext _dbContext;
+        public MovieController()
+        {
+            _dbContext = new ApplicationDbContext();
+        }
+        protected override void Dispose(bool disposing)
+        {
+            _dbContext.Dispose();
+        }
         public ViewResult Index()
         {
-            var movies = GetMovies();
+            var movies = _dbContext.Movies.Include(m => m.Genre).ToList();
             return View(movies);
         }
 
         public ActionResult Details (int id)
         {
-            var movies = GetMovies().SingleOrDefault(m => m.Id == id);
+            var movies = _dbContext.Movies.Include(m => m.Genre).SingleOrDefault(m => m.Id == id);
             return View(movies);
-        }
-        public IEnumerable<Movie> GetMovies()
-        {
-            return new List<Movie>
-            {
-                new Movie{ Id = 1, Name = "Sherlock Holmes" },
-                new Movie{ Id = 2, Name = "Star Wars" }
-            };
         }
     }
 }

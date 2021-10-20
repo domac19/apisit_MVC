@@ -211,9 +211,30 @@
     <Compile Include="Migrations\202110200532336_AddBirthdateToCustomer.Designer.cs">
       <DependentUpon>202110200532336_AddBirthdateToCustomer.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202110200555509_MovieTable.cs" />
+    <Compile Include="Migrations\202110200555509_MovieTable.Designer.cs">
+      <DependentUpon>202110200555509_MovieTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202110200559503_AddingMovieRestriction.cs" />
+    <Compile Include="Migrations\202110200559503_AddingMovieRestriction.Designer.cs">
+      <DependentUpon>202110200559503_AddingMovieRestriction.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202110200602186_NewMovieColumns.cs" />
+    <Compile Include="Migrations\202110200602186_NewMovieColumns.Designer.cs">
+      <DependentUpon>202110200602186_NewMovieColumns.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202110200640175_AddGenreToMovie.cs" />
+    <Compile Include="Migrations\202110200640175_AddGenreToMovie.Designer.cs">
+      <DependentUpon>202110200640175_AddGenreToMovie.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202110200642001_RestrictionGenreName.cs" />
+    <Compile Include="Migrations\202110200642001_RestrictionGenreName.Designer.cs">
+      <DependentUpon>202110200642001_RestrictionGenreName.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Customer.cs" />
+    <Compile Include="Models\Genre.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Models\MembershipType.cs" />
@@ -326,6 +347,21 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202110200532336_AddBirthdateToCustomer.resx">
       <DependentUpon>202110200532336_AddBirthdateToCustomer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202110200555509_MovieTable.resx">
+      <DependentUpon>202110200555509_MovieTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202110200559503_AddingMovieRestriction.resx">
+      <DependentUpon>202110200559503_AddingMovieRestriction.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202110200602186_NewMovieColumns.resx">
+      <DependentUpon>202110200602186_NewMovieColumns.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202110200640175_AddGenreToMovie.resx">
+      <DependentUpon>202110200640175_AddGenreToMovie.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202110200642001_RestrictionGenreName.resx">
+      <DependentUpon>202110200642001_RestrictionGenreName.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
