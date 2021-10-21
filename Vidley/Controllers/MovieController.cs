@@ -25,6 +25,7 @@ namespace Vidley.Controllers
             var genres = _dbContext.Genres.ToList();
             var viewModel = new MovieViewModel
             {
+                Movie = new Movie(),
                 Genres = genres
             };
 
@@ -45,8 +46,18 @@ namespace Vidley.Controllers
             return View("FormMovies", viewModel);
         }
         [HttpPost]
+        [ValidateAntiForgeryToken]
         public ActionResult Save(Movie movie)
         {
+            if (!ModelState.IsValid)
+            {
+                var viewModel = new MovieViewModel
+                {
+                    Movie = movie,
+                    Genres = _dbContext.Genres.ToList()
+                };
+                return View("FormMovies", viewModel);
+            }
             if (movie.Id == 0)
             {
                 _dbContext.Movies.Add(movie);

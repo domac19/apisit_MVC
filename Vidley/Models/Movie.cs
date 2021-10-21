@@ -21,6 +21,7 @@ namespace Vidley.Models
         [Display(Name ="Date Added")]
         public DateTime DateAdded { get; set; }
         
+        [Range(1,20, ErrorMessage ="Please enter number between 1 and 20.")]
         [Display(Name ="Number in Stock")]
         public int NumberInStock { get; set; }
         
