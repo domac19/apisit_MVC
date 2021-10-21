@@ -235,6 +235,18 @@
     <Compile Include="Migrations\202110201240409_UpdateGenreType.Designer.cs">
       <DependentUpon>202110201240409_UpdateGenreType.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202110210550520_ChangeGenreTypeToGenretypeId.cs" />
+    <Compile Include="Migrations\202110210550520_ChangeGenreTypeToGenretypeId.Designer.cs">
+      <DependentUpon>202110210550520_ChangeGenreTypeToGenretypeId.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202110210756319_RemoveGenre_IdFromGenre.cs" />
+    <Compile Include="Migrations\202110210756319_RemoveGenre_IdFromGenre.Designer.cs">
+      <DependentUpon>202110210756319_RemoveGenre_IdFromGenre.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202110210913499_MissingGenre_Id.cs" />
+    <Compile Include="Migrations\202110210913499_MissingGenre_Id.Designer.cs">
+      <DependentUpon>202110210913499_MissingGenre_Id.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Customer.cs" />
@@ -373,6 +385,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202110201240409_UpdateGenreType.resx">
       <DependentUpon>202110201240409_UpdateGenreType.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202110210550520_ChangeGenreTypeToGenretypeId.resx">
+      <DependentUpon>202110210550520_ChangeGenreTypeToGenretypeId.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202110210756319_RemoveGenre_IdFromGenre.resx">
+      <DependentUpon>202110210756319_RemoveGenre_IdFromGenre.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202110210913499_MissingGenre_Id.resx">
+      <DependentUpon>202110210913499_MissingGenre_Id.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

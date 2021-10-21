@@ -56,7 +56,7 @@ namespace Vidley.Controllers
                 var movieDb = _dbContext.Movies.Single(m => m.Id == movie.Id);
                 
                 movieDb.Name = movie.Name;
-                movieDb.GenreType = movie.GenreType;
+                movieDb.Genre_Id = movie.Genre_Id;
                 movieDb.DateAdded = movie.DateAdded;
                 movieDb.ReleseDate = movie.ReleseDate;
                 movieDb.NumberInStock = movie.NumberInStock;

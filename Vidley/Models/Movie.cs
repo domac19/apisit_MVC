@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Vidley.Models
 {
@@ -23,10 +24,10 @@ namespace Vidley.Models
         [Display(Name ="Number in Stock")]
         public int NumberInStock { get; set; }
         
+        [ForeignKey("Genre_Id")]
         public Genre Genre { get; set; }
         
-        [Required]
         [Display(Name = "Genre")]
-        public int GenreType { get; set; }
+        public int Genre_Id { get; set; }
     }
 }
