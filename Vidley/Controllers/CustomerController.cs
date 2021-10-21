@@ -25,13 +25,25 @@ namespace Vidley.Controllers
             var membeshipType = _dbContext.MembershipTypes.ToList();
             var viewModel = new AddCustomerViewModel
             {
+                Customer = new Customer(),
                 MembershipTypes = membeshipType
             };
             return View("Add",viewModel);
         }
         [HttpPost]
+        [ValidateAntiForgeryToken]
         public ActionResult Save(Customer customer)
         {
+            if (!ModelState.IsValid)
+            {
+                var viewModel = new AddCustomerViewModel
+                {
+                    Customer = customer,
+                    MembershipTypes = _dbContext.MembershipTypes.ToList()
+                };
+                return View("Add", viewModel);
+            }
+            
             if (customer.Id == 0)
                 _dbContext.Customers.Add(customer);
             else

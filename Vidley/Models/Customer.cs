@@ -17,6 +17,7 @@ namespace Vidley.Models
         public bool IsSubscribed { get; set; }
 
         [Display (Name="Date of Birth")]
+        [Min18YearsMember]
         public DateTime? Birthdate { get; set; }
         
         public MembershipType MembershipType { get; set; }
