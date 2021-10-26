@@ -72,6 +72,7 @@ namespace Vidley.Controllers
 
             return View("Add", viewModel);
         }
+        [Authorize]
         public ViewResult Index()
         {
             return View();
