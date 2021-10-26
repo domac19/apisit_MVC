@@ -74,9 +74,7 @@ namespace Vidley.Controllers
         }
         public ViewResult Index()
         {
-            var customers = _dbContext.Customers.Include(c => c.MembershipType).ToList();
-
-            return View(customers);
+            return View();
         }
 
         public ActionResult Details(int id)
