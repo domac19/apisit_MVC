@@ -1,8 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Web;
-using System.ComponentModel.DataAnnotations;
+using Vidley.Dtos;
 using Vidley.Models;
 
 namespace Vidley.Models
@@ -21,7 +23,11 @@ namespace Vidley.Models
         
         [Range(1,20, ErrorMessage ="Please enter number between 1 and 20.")]
         public int NumberInStock { get; set; }
-        
+
+        [ForeignKey("Genre_Id")]
+        public GenreDto Genre { get; set; }
+
+        [Required]
         public int Genre_Id { get; set; }
     }
 }

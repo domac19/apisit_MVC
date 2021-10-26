@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Net;
+using System.Data.Entity;
 using System.Net.Http;
 using System.Web.Http;
 using Vidley.Dtos;
@@ -21,7 +22,7 @@ namespace Vidley.Controllers.API
         //GET/api/movies
         public IEnumerable<MovieDto> GetMovies()
         {
-            return _dbContext.Movies.ToList().Select(Mapper.Map<Movie, MovieDto>);
+            return _dbContext.Movies.Include(m => m.Genre).ToList().Select(Mapper.Map<Movie, MovieDto>);
         }
 
         //GET/api/movie/1

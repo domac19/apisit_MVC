@@ -19,6 +19,7 @@ namespace Vidley.App_Start
             Mapper.CreateMap<MovieDto, Movie>();
 
             Mapper.CreateMap<MembershipType, MembershipTypeDto>();
+            Mapper.CreateMap<Genre, GenreDto>();
         }
     }
 }

@@ -17,6 +17,7 @@ namespace Vidley.Dtos
 
         public bool IsSubscribed { get; set; }
 
+
         public MembershipTypeDto MembershipType { get; set; }
 
         //[Min18YearsMember]
