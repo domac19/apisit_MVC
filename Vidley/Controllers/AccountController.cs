@@ -152,16 +152,14 @@ namespace Vidley.Controllers
         {
             if (ModelState.IsValid)
             {
-                var user = new ApplicationUser { UserName = model.Email, Email = model.Email };
+                var user = new ApplicationUser { 
+                    UserName = model.Email, 
+                    Email = model.Email,
+                    DrivingLicense = model.DrivingLicense};
+
                 var result = await UserManager.CreateAsync(user, model.Password);
                 if (result.Succeeded)
                 {
-
-                    //Temp code
-                    var roleStore = new RoleStore<IdentityRole>(new ApplicationDbContext());
-                    var roleManager = new RoleManager<IdentityRole>(roleStore);
-                    await roleManager.CreateAsync(new IdentityRole("CanManageMovies"));
-                    await UserManager.AddToRoleAsync(user.Id, "CanManageMovies");
 
                     await SignInManager.SignInAsync(user, isPersistent:false, rememberBrowser:false);
                     
