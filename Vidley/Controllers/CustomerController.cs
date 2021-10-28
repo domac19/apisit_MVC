@@ -20,6 +20,8 @@ namespace Vidley.Controllers
         {
             _dbContext.Dispose();
         }
+
+        [Authorize]
         public ActionResult Add()
         {
             var membeshipType = _dbContext.MembershipTypes.ToList();

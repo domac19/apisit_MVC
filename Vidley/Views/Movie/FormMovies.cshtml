@@ -15,12 +15,12 @@
     </div>
     <div class="form-group">
         @Html.LabelFor(m => m.Movie.DateAdded)
-        @Html.TextBoxFor(m => m.Movie.DateAdded, new { @class = "form-control" })
+        @Html.TextBoxFor(m => m.Movie.DateAdded, "{0:d MM yyyy}", new { @class = "form-control" })
         @Html.ValidationMessageFor(m => m.Movie.DateAdded)
     </div>
     <div class="form-group">
         @Html.LabelFor(m => m.Movie.ReleseDate)
-        @Html.TextBoxFor(m => m.Movie.ReleseDate, new { @class = "form-control" })
+        @Html.TextBoxFor(m => m.Movie.ReleseDate, "{0:d MM yyyy}", new { @class = "form-control" })
         @Html.ValidationMessageFor(m => m.Movie.ReleseDate)
     </div>
     <div class="form-group">

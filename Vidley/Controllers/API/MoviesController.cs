@@ -20,9 +20,10 @@ namespace Vidley.Controllers.API
         }
 
         //GET/api/movies
-        public IEnumerable<MovieDto> GetMovies()
+        public IHttpActionResult GetMovies()
         {
-            return _dbContext.Movies.Include(m => m.Genre).ToList().Select(Mapper.Map<Movie, MovieDto>);
+            var moviesDto = _dbContext.Movies.Include(m => m.Genre).ToList().Select(Mapper.Map<Movie, MovieDto>);
+            return Ok(moviesDto);
         }
 
         //GET/api/movie/1

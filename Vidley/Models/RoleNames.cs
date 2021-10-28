@@ -5,7 +5,7 @@ using System.Web;
 
 namespace Vidley.Models
 {
-    public  static class RoleNames
+    public static class RoleNames
     {
         public const string CanManageMovies = "CanManageMovies";
     }

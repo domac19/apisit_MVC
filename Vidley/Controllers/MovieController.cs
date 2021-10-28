@@ -20,7 +20,8 @@ namespace Vidley.Controllers
         {
             _dbContext.Dispose();
         }
-        [Authorize(Roles = RoleNames.CanManageMovies)]
+
+        [Authorize]
         public ActionResult New()
         {
             var genres = _dbContext.Genres.ToList();
@@ -32,6 +33,7 @@ namespace Vidley.Controllers
 
             return View("FormMovies", viewModel);
         }
+
         public ActionResult Edit(int id)
         {
             var movies = _dbContext.Movies.SingleOrDefault(m => m.Id == id);
@@ -79,10 +81,10 @@ namespace Vidley.Controllers
         }
         public ViewResult Index()
         {
-            if (User.IsInRole(RoleNames.CanManageMovies))
+            if (!User.IsInRole(RoleNames.CanManageMovies))
                 return View("Index");
-
-            return View("ReadOnlyList");
+            else
+                return View("ReadOnlyList");
         }
 
         public ActionResult Details (int id)
