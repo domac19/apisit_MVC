@@ -5,9 +5,7 @@ using System.Web;
 
 namespace Vidly.Dtos
 {
-    public class MembershipTypeDto
+    public class RentalDto
     {
-        public int Id { get; set; }
-        public string Name { get; set; }
     }
 }

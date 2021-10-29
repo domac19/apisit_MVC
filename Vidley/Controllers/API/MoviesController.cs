@@ -6,10 +6,10 @@ using System.Net;
 using System.Data.Entity;
 using System.Net.Http;
 using System.Web.Http;
-using Vidley.Dtos;
-using Vidley.Models;
+using Vidly.Dtos;
+using Vidly.Models;
 
-namespace Vidley.Controllers.API
+namespace Vidly.Controllers.API
 {
     public class MoviesController : ApiController
     {

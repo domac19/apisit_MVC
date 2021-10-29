@@ -3,11 +3,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
-using Vidley.Models;
+using Vidly.Models;
 using System.Data.Entity;
-using Vidley.ViewModels;
+using Vidly.ViewModels;
 
-namespace Vidley.Controllers
+namespace Vidly.Controllers
 {
     public class CustomersController : Controller
     {

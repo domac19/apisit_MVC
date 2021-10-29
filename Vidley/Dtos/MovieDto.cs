@@ -4,10 +4,10 @@ using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Web;
-using Vidley.Dtos;
-using Vidley.Models;
+using Vidly.Dtos;
+using Vidly.Models;
 
-namespace Vidley.Models
+namespace Vidly.Models
 {
     public class MovieDto
     {

@@ -5,7 +5,7 @@ using System.Web.Http;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Serialization;
 
-namespace Vidley
+namespace Vidly
 {
     public static class WebApiConfig
     {

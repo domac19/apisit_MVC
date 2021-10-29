@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Web;
-using Vidley.Models;
+using Vidly.Models;
 
-namespace Vidley.Dtos
+namespace Vidly.Dtos
 {
     public class CustomerDto
     {

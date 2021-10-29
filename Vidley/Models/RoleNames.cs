@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 
-namespace Vidley.Models
+namespace Vidly.Models
 {
     public static class RoleNames
     {
