@@ -277,6 +277,14 @@
     <Compile Include="Migrations\202110270834420_AddDrivingLicenseToUser.Designer.cs">
       <DependentUpon>202110270834420_AddDrivingLicenseToUser.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202111020729168_Rentals.cs" />
+    <Compile Include="Migrations\202111020729168_Rentals.Designer.cs">
+      <DependentUpon>202111020729168_Rentals.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202111020813566_AddingNewColumnIsAvaliable.cs" />
+    <Compile Include="Migrations\202111020813566_AddingNewColumnIsAvaliable.Designer.cs">
+      <DependentUpon>202111020813566_AddingNewColumnIsAvaliable.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Customer.cs" />
@@ -609,6 +617,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202110270834420_AddDrivingLicenseToUser.resx">
       <DependentUpon>202110270834420_AddDrivingLicenseToUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202111020729168_Rentals.resx">
+      <DependentUpon>202111020729168_Rentals.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202111020813566_AddingNewColumnIsAvaliable.resx">
+      <DependentUpon>202111020813566_AddingNewColumnIsAvaliable.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
